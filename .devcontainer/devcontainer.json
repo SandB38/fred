@@ -6,7 +6,10 @@
     "args": {
       "USERNAME": "vscode",
       "USER_UID": "1000",
-      "USER_GID": "1000"
+      "USER_GID": "1000",
+      "HTTP_PROXY": "${localEnv:HTTP_PROXY}",
+      "HTTPS_PROXY": "${localEnv:HTTPS_PROXY}",
+      "NO_PROXY": "${localEnv:NO_PROXY}"
     }
   },
   "workspaceFolder": "/workspaces/fred",
@@ -19,7 +22,13 @@
     "source=fred-dev-cache,target=/fred-dev-cache,type=volume"
   ],
   "containerEnv": {
-    "DEV_CACHE_DIR": "/fred-dev-cache"
+    "DEV_CACHE_DIR": "/fred-dev-cache",
+    "HTTP_PROXY": "${localEnv:HTTP_PROXY}",
+    "HTTPS_PROXY": "${localEnv:HTTPS_PROXY}",
+    "NO_PROXY": "${localEnv:NO_PROXY}",
+    "http_proxy": "${localEnv:HTTP_PROXY}",
+    "https_proxy": "${localEnv:HTTPS_PROXY}",
+    "no_proxy": "${localEnv:NO_PROXY}"
   },
   "remoteEnv": {
     // Save ZSH and BASH history to dev cache volume (set by postStartCommand)
