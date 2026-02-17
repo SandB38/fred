@@ -1,5 +1,7 @@
 # Fred
 
+Just a little diff
+
 [Who does what](https://github.com/orgs/ThalesGroup/projects/8/views/4)
 
 Fred is both:
